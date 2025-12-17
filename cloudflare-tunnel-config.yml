@@ -1,0 +1,14 @@
+# Configuration Cloudflare Tunnel
+# Utilisez ce fichier avec: cloudflared tunnel --config cloudflare-tunnel-config.yml run crm-agences-tunnel
+
+tunnel: crm-agences-tunnel
+credentials-file: C:\Users\c.gagnon\.cloudflared\<TUNNEL_ID>.json
+
+ingress:
+  # Route le trafic vers votre serveur backend local
+  - hostname: crm-agences-api.your-domain.com  # Remplacez par votre domaine
+    service: http://localhost:3001
+  
+  # Catch-all pour les autres requêtes
+  - service: http_status:404
+

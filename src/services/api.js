@@ -1,4 +1,5 @@
-const API_URL = 'http://localhost:3001/api';
+// Utilise l'URL de l'API depuis les variables d'environnement, ou localhost par défaut
+const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001/api';
 
 export const api = {
   // Récupérer toutes les agences

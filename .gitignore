@@ -16,6 +16,12 @@ node_modules/
 .env.development.local
 .env.test.local
 .env.production.local
+.env
+.env.*.local
+
+# Cloudflare
+.wrangler/
+.dev.vars
 
 # Logs
 npm-debug.log*

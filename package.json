@@ -10,7 +10,10 @@
     "dev:all": "concurrently \"npm run dev:server\" \"npm run dev\"",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "deploy:worker": "wrangler deploy",
+    "db:migrate": "wrangler d1 execute crm-agences-db --file=./migrations/schema.sql --remote",
+    "db:seed": "wrangler d1 execute crm-agences-db --file=./migrations/seed.sql --remote"
   },
   "dependencies": {
     "react": "^19.2.0",
